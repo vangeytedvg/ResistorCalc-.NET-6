@@ -90,7 +90,7 @@
             // 
             this.ComboBand_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_1.FormattingEnabled = true;
-            this.ComboBand_1.Location = new System.Drawing.Point(28, 175);
+            this.ComboBand_1.Location = new System.Drawing.Point(27, 193);
             this.ComboBand_1.Name = "ComboBand_1";
             this.ComboBand_1.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_1.TabIndex = 8;
@@ -99,7 +99,7 @@
             // 
             this.ComboBand_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_2.FormattingEnabled = true;
-            this.ComboBand_2.Location = new System.Drawing.Point(125, 175);
+            this.ComboBand_2.Location = new System.Drawing.Point(124, 193);
             this.ComboBand_2.Name = "ComboBand_2";
             this.ComboBand_2.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_2.TabIndex = 9;
@@ -108,7 +108,7 @@
             // 
             this.ComboBand_3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_3.FormattingEnabled = true;
-            this.ComboBand_3.Location = new System.Drawing.Point(222, 175);
+            this.ComboBand_3.Location = new System.Drawing.Point(221, 193);
             this.ComboBand_3.Name = "ComboBand_3";
             this.ComboBand_3.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_3.TabIndex = 10;
@@ -117,7 +117,7 @@
             // 
             this.ComboBand_Tolerance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_Tolerance.FormattingEnabled = true;
-            this.ComboBand_Tolerance.Location = new System.Drawing.Point(319, 175);
+            this.ComboBand_Tolerance.Location = new System.Drawing.Point(318, 193);
             this.ComboBand_Tolerance.Name = "ComboBand_Tolerance";
             this.ComboBand_Tolerance.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_Tolerance.TabIndex = 12;
@@ -126,7 +126,7 @@
             // 
             this.ComboBand_ColorCof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_ColorCof.FormattingEnabled = true;
-            this.ComboBand_ColorCof.Location = new System.Drawing.Point(416, 175);
+            this.ComboBand_ColorCof.Location = new System.Drawing.Point(415, 193);
             this.ComboBand_ColorCof.Name = "ComboBand_ColorCof";
             this.ComboBand_ColorCof.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_ColorCof.TabIndex = 13;

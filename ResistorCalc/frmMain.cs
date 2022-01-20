@@ -37,13 +37,22 @@ namespace ResistorCalc {
             toleranceColors[0] = Color.Gold;
             toleranceColors[1] = Color.Silver;
 
-
-
+            // Multiplier colors
+            Color[] multiPlierColors = new Color[9];
+            multiPlierColors[0] = Color.Brown;
+            multiPlierColors[1] = Color.Red;
+            multiPlierColors[2] = Color.Orange;
+            multiPlierColors[3] = Color.Yellow;
+            multiPlierColors[4] = Color.Green;
+            multiPlierColors[5] = Color.Blue;
+            multiPlierColors[6] = Color.Violet;
+            multiPlierColors[7] = Color.Gray;
+            multiPlierColors[8] = Color.White;
 
             // Set the combos
             DisplayColorSamples(this.ComboBand_1, colors);
             DisplayColorSamples(this.ComboBand_2, colors);
-            DisplayColorSamples(this.ComboBand_3, colors);            
+            DisplayColorSamples(this.ComboBand_3, multiPlierColors);            
             DisplayColorSamples(this.ComboBand_Tolerance, toleranceColors);
             DisplayColorSamples(this.ComboBand_ColorCof, colors);
             
