@@ -35,7 +35,24 @@
             this.ComboBand_3 = new System.Windows.Forms.ComboBox();
             this.ComboBand_Tolerance = new System.Windows.Forms.ComboBox();
             this.ComboBand_ColorCof = new System.Windows.Forms.ComboBox();
+            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picBand1 = new System.Windows.Forms.PictureBox();
+            this.picBand2 = new System.Windows.Forms.PictureBox();
+            this.picBand3 = new System.Windows.Forms.PictureBox();
+            this.picBand4 = new System.Windows.Forms.PictureBox();
+            this.picBand5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand5)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonManager1
@@ -131,11 +148,111 @@
             this.ComboBand_ColorCof.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_ColorCof.TabIndex = 13;
             // 
+            // kryptonLabel3
+            // 
+            this.kryptonLabel3.Location = new System.Drawing.Point(27, 167);
+            this.kryptonLabel3.Name = "kryptonLabel3";
+            this.kryptonLabel3.Size = new System.Drawing.Size(58, 20);
+            this.kryptonLabel3.TabIndex = 14;
+            this.kryptonLabel3.Values.Text = "1st Band";
+            // 
+            // kryptonLabel4
+            // 
+            this.kryptonLabel4.Location = new System.Drawing.Point(125, 167);
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Size = new System.Drawing.Size(62, 20);
+            this.kryptonLabel4.TabIndex = 15;
+            this.kryptonLabel4.Values.Text = "2nd Band";
+            // 
+            // kryptonLabel5
+            // 
+            this.kryptonLabel5.Location = new System.Drawing.Point(221, 167);
+            this.kryptonLabel5.Name = "kryptonLabel5";
+            this.kryptonLabel5.Size = new System.Drawing.Size(60, 20);
+            this.kryptonLabel5.TabIndex = 16;
+            this.kryptonLabel5.Values.Text = "3rd Band";
+            // 
+            // kryptonLabel6
+            // 
+            this.kryptonLabel6.Location = new System.Drawing.Point(318, 167);
+            this.kryptonLabel6.Name = "kryptonLabel6";
+            this.kryptonLabel6.Size = new System.Drawing.Size(59, 20);
+            this.kryptonLabel6.TabIndex = 17;
+            this.kryptonLabel6.Values.Text = "4th Band";
+            // 
+            // kryptonLabel7
+            // 
+            this.kryptonLabel7.Location = new System.Drawing.Point(415, 167);
+            this.kryptonLabel7.Name = "kryptonLabel7";
+            this.kryptonLabel7.Size = new System.Drawing.Size(59, 20);
+            this.kryptonLabel7.TabIndex = 18;
+            this.kryptonLabel7.Values.Text = "5th Band";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ResistorCalc.Properties.Resources.resistor;
+            this.pictureBox2.Location = new System.Drawing.Point(115, 238);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(298, 71);
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // picBand1
+            // 
+            this.picBand1.Location = new System.Drawing.Point(188, 244);
+            this.picBand1.Name = "picBand1";
+            this.picBand1.Size = new System.Drawing.Size(16, 59);
+            this.picBand1.TabIndex = 20;
+            this.picBand1.TabStop = false;
+            // 
+            // picBand2
+            // 
+            this.picBand2.Location = new System.Drawing.Point(213, 249);
+            this.picBand2.Name = "picBand2";
+            this.picBand2.Size = new System.Drawing.Size(14, 49);
+            this.picBand2.TabIndex = 21;
+            this.picBand2.TabStop = false;
+            // 
+            // picBand3
+            // 
+            this.picBand3.Location = new System.Drawing.Point(237, 249);
+            this.picBand3.Name = "picBand3";
+            this.picBand3.Size = new System.Drawing.Size(14, 49);
+            this.picBand3.TabIndex = 22;
+            this.picBand3.TabStop = false;
+            // 
+            // picBand4
+            // 
+            this.picBand4.Location = new System.Drawing.Point(261, 249);
+            this.picBand4.Name = "picBand4";
+            this.picBand4.Size = new System.Drawing.Size(14, 49);
+            this.picBand4.TabIndex = 23;
+            this.picBand4.TabStop = false;
+            // 
+            // picBand5
+            // 
+            this.picBand5.Location = new System.Drawing.Point(311, 249);
+            this.picBand5.Name = "picBand5";
+            this.picBand5.Size = new System.Drawing.Size(14, 49);
+            this.picBand5.TabIndex = 24;
+            this.picBand5.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 472);
+            this.ClientSize = new System.Drawing.Size(531, 333);
+            this.Controls.Add(this.picBand5);
+            this.Controls.Add(this.picBand4);
+            this.Controls.Add(this.picBand3);
+            this.Controls.Add(this.picBand2);
+            this.Controls.Add(this.picBand1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.kryptonLabel7);
+            this.Controls.Add(this.kryptonLabel6);
+            this.Controls.Add(this.kryptonLabel5);
+            this.Controls.Add(this.kryptonLabel4);
+            this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.ComboBand_ColorCof);
             this.Controls.Add(this.ComboBand_Tolerance);
             this.Controls.Add(this.ComboBand_3);
@@ -152,6 +269,12 @@
             this.TextExtra = "DenkaTech Software";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBand5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +294,16 @@
         private ComboBox ComboBand_3;
         private ComboBox ComboBand_Tolerance;
         private ComboBox ComboBand_ColorCof;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private PictureBox pictureBox2;
+        private PictureBox picBand1;
+        private PictureBox picBand2;
+        private PictureBox picBand3;
+        private PictureBox picBand4;
+        private PictureBox picBand5;
     }
 }
