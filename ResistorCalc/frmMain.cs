@@ -5,13 +5,18 @@ using System.Drawing.Text;
 namespace ResistorCalc {
     public partial class frmMain : KryptonForm {
 
-        private const int MarginWidth = 4;
-        private const int MarginHeight = 4;
+        private const int MarginWidth = 2;
+        private const int MarginHeight = 2;
 
         public frmMain() {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Setup
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmMain_Load(object sender, EventArgs e) {
             // Band count determinator
             ComboBands.Items.Add(new ComboBandItem(3, "3 Band"));
@@ -54,15 +59,18 @@ namespace ResistorCalc {
             DisplayColorSamples(this.ComboBand_2, colors);
             DisplayColorSamples(this.ComboBand_3, multiPlierColors);            
             DisplayColorSamples(this.ComboBand_Tolerance, toleranceColors);
-            DisplayColorSamples(this.ComboBand_ColorCof, colors);
-            
+            DisplayColorSamples(this.ComboBand_ColorCof, colors);            
         }
 
         private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e) {
 
         }
 
-        // Set up the ComboBox to display color samples and their names.
+        /// <summary>
+        /// Set up the ComboBox to display color samples and their names.
+        /// </summary>
+        /// <param name="cbo"></param>
+        /// <param name="colors"></param>       
         private void DisplayColorSamples(ComboBox cbo, Color[] colors) {
             // Make the ComboBox owner-drawn.
             cbo.DrawMode = DrawMode.OwnerDrawFixed;
@@ -75,8 +83,9 @@ namespace ResistorCalc {
             cbo.DrawItem += cboColorSample_DrawItem;
         }
 
-
-        // Draw a ComboBox item that is displaying a color sample
+        /// <summary>
+        /// Draw a ComboBox item that is displaying a color sample
+        /// </summary>         
         private void cboColorSample_DrawItem(object sender, DrawItemEventArgs e) {
             if (e.Index < 0) return;
 
@@ -116,5 +125,14 @@ namespace ResistorCalc {
             e.DrawFocusRectangle();
         }
 
+        private void ComboBand_1_SelectedIndexChanged(object sender, EventArgs e) {
+            Color k = (Color)ComboBand_1.SelectedItem;
+            picBand1.BackColor = k;
+        }
+
+        private void ComboBand_2_SelectedIndexChanged(object sender, EventArgs e) {
+            Color k = (Color)ComboBand_2.SelectedItem;
+            picBand2.BackColor = k;
+        }
     }
 }

@@ -111,6 +111,7 @@
             this.ComboBand_1.Name = "ComboBand_1";
             this.ComboBand_1.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_1.TabIndex = 8;
+            this.ComboBand_1.SelectedIndexChanged += new System.EventHandler(this.ComboBand_1_SelectedIndexChanged);
             // 
             // ComboBand_2
             // 
@@ -120,6 +121,7 @@
             this.ComboBand_2.Name = "ComboBand_2";
             this.ComboBand_2.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_2.TabIndex = 9;
+            this.ComboBand_2.SelectedIndexChanged += new System.EventHandler(this.ComboBand_2_SelectedIndexChanged);
             // 
             // ComboBand_3
             // 
