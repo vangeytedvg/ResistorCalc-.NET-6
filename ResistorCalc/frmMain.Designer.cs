@@ -131,6 +131,7 @@
             this.ComboBand_3.Name = "ComboBand_3";
             this.ComboBand_3.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_3.TabIndex = 10;
+            this.ComboBand_3.SelectedIndexChanged += new System.EventHandler(this.ComboBand_3_SelectedIndexChanged);
             // 
             // ComboBand_Tolerance
             // 
@@ -140,6 +141,7 @@
             this.ComboBand_Tolerance.Name = "ComboBand_Tolerance";
             this.ComboBand_Tolerance.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_Tolerance.TabIndex = 12;
+            this.ComboBand_Tolerance.SelectedIndexChanged += new System.EventHandler(this.ComboBand_Tolerance_SelectedIndexChanged);
             // 
             // ComboBand_ColorCof
             // 
@@ -149,6 +151,7 @@
             this.ComboBand_ColorCof.Name = "ComboBand_ColorCof";
             this.ComboBand_ColorCof.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_ColorCof.TabIndex = 13;
+            this.ComboBand_ColorCof.SelectedIndexChanged += new System.EventHandler(this.ComboBand_ColorCof_SelectedIndexChanged);
             // 
             // kryptonLabel3
             // 
@@ -266,6 +269,7 @@
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(551, 376);
             this.Name = "frmMain";
             this.Text = "Resistor Value Calculator";
             this.TextExtra = "DenkaTech Software";

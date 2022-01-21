@@ -134,5 +134,20 @@ namespace ResistorCalc {
             Color k = (Color)ComboBand_2.SelectedItem;
             picBand2.BackColor = k;
         }
+
+        private void ComboBand_3_SelectedIndexChanged(object sender, EventArgs e) {
+            Color k = (Color)ComboBand_3.SelectedItem;
+            picBand3.BackColor = k;
+        }
+
+        private void ComboBand_Tolerance_SelectedIndexChanged(object sender, EventArgs e) {
+            Color k = (Color)ComboBand_Tolerance.SelectedItem;
+            picBand4.BackColor = k;
+        }
+
+        private void ComboBand_ColorCof_SelectedIndexChanged(object sender, EventArgs e) {
+            Color k = (Color)ComboBand_ColorCof.SelectedItem;
+            picBand5.BackColor = k;
+        }
     }
 }

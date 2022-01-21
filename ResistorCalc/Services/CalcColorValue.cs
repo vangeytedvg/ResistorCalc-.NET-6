@@ -4,8 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ResistorCalc {
+namespace ResistorCalc.Services {
+
+    /// <summary>
+    /// Class containing static conversion functions
+    /// </summary>
     internal static class CalcColorValue {
+
+        /// <summary>
+        /// Static function to convert colors to resistance values
+        /// </summary>
+        /// <param name="color"></param>
+        /// <returns></returns>
         public static int ConvertColorToValue(Color color) {
             int digit = 0;
             if (color == Color.Black) {
