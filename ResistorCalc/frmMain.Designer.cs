@@ -35,17 +35,18 @@
             this.ComboBand_3 = new System.Windows.Forms.ComboBox();
             this.ComboBand_Tolerance = new System.Windows.Forms.ComboBox();
             this.ComboBand_ColorCof = new System.Windows.Forms.ComboBox();
-            this.kryptonLabel3 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel6 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel7 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl1band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl2band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl3band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl4band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lbl5band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picBand1 = new System.Windows.Forms.PictureBox();
             this.picBand2 = new System.Windows.Forms.PictureBox();
             this.picBand3 = new System.Windows.Forms.PictureBox();
             this.picBand4 = new System.Windows.Forms.PictureBox();
             this.picBand5 = new System.Windows.Forms.PictureBox();
+            this.btnCalculateResult = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBand1)).BeginInit();
@@ -68,7 +69,7 @@
             // kryptonLabel1
             // 
             this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.TitleControl;
-            this.kryptonLabel1.Location = new System.Drawing.Point(125, 12);
+            this.kryptonLabel1.Location = new System.Drawing.Point(109, 20);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Palette = this.kryptonPalette1;
             this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -79,16 +80,16 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ResistorCalc.Properties.Resources.ohm;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(107, 118);
+            this.pictureBox1.Size = new System.Drawing.Size(91, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(125, 49);
+            this.kryptonLabel2.Location = new System.Drawing.Point(109, 57);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(136, 20);
             this.kryptonLabel2.TabIndex = 3;
@@ -98,16 +99,17 @@
             // 
             this.ComboBands.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBands.FormattingEnabled = true;
-            this.ComboBands.Location = new System.Drawing.Point(267, 49);
+            this.ComboBands.Location = new System.Drawing.Point(251, 57);
             this.ComboBands.Name = "ComboBands";
             this.ComboBands.Size = new System.Drawing.Size(121, 23);
             this.ComboBands.TabIndex = 7;
+            this.ComboBands.SelectedIndexChanged += new System.EventHandler(this.ComboBands_SelectedIndexChanged);
             // 
             // ComboBand_1
             // 
             this.ComboBand_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_1.FormattingEnabled = true;
-            this.ComboBand_1.Location = new System.Drawing.Point(27, 193);
+            this.ComboBand_1.Location = new System.Drawing.Point(27, 140);
             this.ComboBand_1.Name = "ComboBand_1";
             this.ComboBand_1.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_1.TabIndex = 8;
@@ -117,7 +119,7 @@
             // 
             this.ComboBand_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_2.FormattingEnabled = true;
-            this.ComboBand_2.Location = new System.Drawing.Point(124, 193);
+            this.ComboBand_2.Location = new System.Drawing.Point(124, 140);
             this.ComboBand_2.Name = "ComboBand_2";
             this.ComboBand_2.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_2.TabIndex = 9;
@@ -127,7 +129,7 @@
             // 
             this.ComboBand_3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_3.FormattingEnabled = true;
-            this.ComboBand_3.Location = new System.Drawing.Point(221, 193);
+            this.ComboBand_3.Location = new System.Drawing.Point(221, 140);
             this.ComboBand_3.Name = "ComboBand_3";
             this.ComboBand_3.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_3.TabIndex = 10;
@@ -137,7 +139,7 @@
             // 
             this.ComboBand_Tolerance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_Tolerance.FormattingEnabled = true;
-            this.ComboBand_Tolerance.Location = new System.Drawing.Point(318, 193);
+            this.ComboBand_Tolerance.Location = new System.Drawing.Point(318, 140);
             this.ComboBand_Tolerance.Name = "ComboBand_Tolerance";
             this.ComboBand_Tolerance.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_Tolerance.TabIndex = 12;
@@ -147,56 +149,58 @@
             // 
             this.ComboBand_ColorCof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBand_ColorCof.FormattingEnabled = true;
-            this.ComboBand_ColorCof.Location = new System.Drawing.Point(415, 193);
+            this.ComboBand_ColorCof.Location = new System.Drawing.Point(415, 140);
             this.ComboBand_ColorCof.Name = "ComboBand_ColorCof";
             this.ComboBand_ColorCof.Size = new System.Drawing.Size(91, 23);
             this.ComboBand_ColorCof.TabIndex = 13;
             this.ComboBand_ColorCof.SelectedIndexChanged += new System.EventHandler(this.ComboBand_ColorCof_SelectedIndexChanged);
             // 
-            // kryptonLabel3
+            // lbl1band
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(27, 167);
-            this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(58, 20);
-            this.kryptonLabel3.TabIndex = 14;
-            this.kryptonLabel3.Values.Text = "1st Band";
+            this.lbl1band.Location = new System.Drawing.Point(27, 114);
+            this.lbl1band.Name = "lbl1band";
+            this.lbl1band.Palette = this.kryptonPalette1;
+            this.lbl1band.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.lbl1band.Size = new System.Drawing.Size(58, 20);
+            this.lbl1band.TabIndex = 14;
+            this.lbl1band.Values.Text = "1st Band";
             // 
-            // kryptonLabel4
+            // lbl2band
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(125, 167);
-            this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(62, 20);
-            this.kryptonLabel4.TabIndex = 15;
-            this.kryptonLabel4.Values.Text = "2nd Band";
+            this.lbl2band.Location = new System.Drawing.Point(125, 114);
+            this.lbl2band.Name = "lbl2band";
+            this.lbl2band.Size = new System.Drawing.Size(62, 20);
+            this.lbl2band.TabIndex = 15;
+            this.lbl2band.Values.Text = "2nd Band";
             // 
-            // kryptonLabel5
+            // lbl3band
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(221, 167);
-            this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(60, 20);
-            this.kryptonLabel5.TabIndex = 16;
-            this.kryptonLabel5.Values.Text = "3rd Band";
+            this.lbl3band.Location = new System.Drawing.Point(221, 114);
+            this.lbl3band.Name = "lbl3band";
+            this.lbl3band.Size = new System.Drawing.Size(60, 20);
+            this.lbl3band.TabIndex = 16;
+            this.lbl3band.Values.Text = "3rd Band";
             // 
-            // kryptonLabel6
+            // lbl4band
             // 
-            this.kryptonLabel6.Location = new System.Drawing.Point(318, 167);
-            this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(59, 20);
-            this.kryptonLabel6.TabIndex = 17;
-            this.kryptonLabel6.Values.Text = "4th Band";
+            this.lbl4band.Location = new System.Drawing.Point(318, 114);
+            this.lbl4band.Name = "lbl4band";
+            this.lbl4band.Size = new System.Drawing.Size(59, 20);
+            this.lbl4band.TabIndex = 17;
+            this.lbl4band.Values.Text = "4th Band";
             // 
-            // kryptonLabel7
+            // lbl5band
             // 
-            this.kryptonLabel7.Location = new System.Drawing.Point(415, 167);
-            this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(59, 20);
-            this.kryptonLabel7.TabIndex = 18;
-            this.kryptonLabel7.Values.Text = "5th Band";
+            this.lbl5band.Location = new System.Drawing.Point(415, 114);
+            this.lbl5band.Name = "lbl5band";
+            this.lbl5band.Size = new System.Drawing.Size(59, 20);
+            this.lbl5band.TabIndex = 18;
+            this.lbl5band.Values.Text = "5th Band";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ResistorCalc.Properties.Resources.resistor;
-            this.pictureBox2.Location = new System.Drawing.Point(115, 238);
+            this.pictureBox2.Location = new System.Drawing.Point(115, 185);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(298, 71);
             this.pictureBox2.TabIndex = 19;
@@ -204,7 +208,7 @@
             // 
             // picBand1
             // 
-            this.picBand1.Location = new System.Drawing.Point(188, 244);
+            this.picBand1.Location = new System.Drawing.Point(188, 191);
             this.picBand1.Name = "picBand1";
             this.picBand1.Size = new System.Drawing.Size(16, 59);
             this.picBand1.TabIndex = 20;
@@ -212,7 +216,7 @@
             // 
             // picBand2
             // 
-            this.picBand2.Location = new System.Drawing.Point(213, 249);
+            this.picBand2.Location = new System.Drawing.Point(213, 196);
             this.picBand2.Name = "picBand2";
             this.picBand2.Size = new System.Drawing.Size(14, 49);
             this.picBand2.TabIndex = 21;
@@ -220,7 +224,7 @@
             // 
             // picBand3
             // 
-            this.picBand3.Location = new System.Drawing.Point(237, 249);
+            this.picBand3.Location = new System.Drawing.Point(237, 196);
             this.picBand3.Name = "picBand3";
             this.picBand3.Size = new System.Drawing.Size(14, 49);
             this.picBand3.TabIndex = 22;
@@ -228,7 +232,7 @@
             // 
             // picBand4
             // 
-            this.picBand4.Location = new System.Drawing.Point(261, 249);
+            this.picBand4.Location = new System.Drawing.Point(261, 196);
             this.picBand4.Name = "picBand4";
             this.picBand4.Size = new System.Drawing.Size(14, 49);
             this.picBand4.TabIndex = 23;
@@ -236,28 +240,39 @@
             // 
             // picBand5
             // 
-            this.picBand5.Location = new System.Drawing.Point(311, 249);
+            this.picBand5.Location = new System.Drawing.Point(311, 196);
             this.picBand5.Name = "picBand5";
             this.picBand5.Size = new System.Drawing.Size(14, 49);
             this.picBand5.TabIndex = 24;
             this.picBand5.TabStop = false;
+            // 
+            // btnCalculateResult
+            // 
+            this.btnCalculateResult.AutoSize = true;
+            this.btnCalculateResult.Location = new System.Drawing.Point(191, 277);
+            this.btnCalculateResult.Name = "btnCalculateResult";
+            this.btnCalculateResult.Size = new System.Drawing.Size(149, 38);
+            this.btnCalculateResult.TabIndex = 25;
+            this.btnCalculateResult.Values.Image = global::ResistorCalc.Properties.Resources.calculator;
+            this.btnCalculateResult.Values.Text = "Calculate";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 333);
+            this.Controls.Add(this.btnCalculateResult);
             this.Controls.Add(this.picBand5);
             this.Controls.Add(this.picBand4);
             this.Controls.Add(this.picBand3);
             this.Controls.Add(this.picBand2);
             this.Controls.Add(this.picBand1);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.kryptonLabel7);
-            this.Controls.Add(this.kryptonLabel6);
-            this.Controls.Add(this.kryptonLabel5);
-            this.Controls.Add(this.kryptonLabel4);
-            this.Controls.Add(this.kryptonLabel3);
+            this.Controls.Add(this.lbl5band);
+            this.Controls.Add(this.lbl4band);
+            this.Controls.Add(this.lbl3band);
+            this.Controls.Add(this.lbl2band);
+            this.Controls.Add(this.lbl1band);
             this.Controls.Add(this.ComboBand_ColorCof);
             this.Controls.Add(this.ComboBand_Tolerance);
             this.Controls.Add(this.ComboBand_3);
@@ -269,7 +284,7 @@
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(551, 376);
+            this.MaximumSize = new System.Drawing.Size(551, 400);
             this.Name = "frmMain";
             this.Text = "Resistor Value Calculator";
             this.TextExtra = "DenkaTech Software";
@@ -300,16 +315,17 @@
         private ComboBox ComboBand_3;
         private ComboBox ComboBand_Tolerance;
         private ComboBox ComboBand_ColorCof;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel5;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel6;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel7;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl1band;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl2band;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl3band;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl4band;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl5band;
         private PictureBox pictureBox2;
         private PictureBox picBand1;
         private PictureBox picBand2;
         private PictureBox picBand3;
         private PictureBox picBand4;
         private PictureBox picBand5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnCalculateResult;
     }
 }

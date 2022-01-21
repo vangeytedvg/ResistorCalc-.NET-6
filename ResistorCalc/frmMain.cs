@@ -5,6 +5,18 @@ using System.Drawing.Text;
 namespace ResistorCalc {
     public partial class frmMain : KryptonForm {
 
+        /// <summary>
+        /// Resistor type enumeration
+        /// </summary>
+        enum ResistorType : int {
+            Band3 = 3,
+            Band4 = 4,
+            Band5 = 5,            
+        }
+
+        private int CalcMode { get; set; }
+
+        // Constant for the margins of the color squares in the combo boxes
         private const int MarginWidth = 2;
         private const int MarginHeight = 2;
 
@@ -21,8 +33,7 @@ namespace ResistorCalc {
             // Band count determinator
             ComboBands.Items.Add(new ComboBandItem(3, "3 Band"));
             ComboBands.Items.Add(new ComboBandItem(4, "4 Band"));
-            ComboBands.Items.Add(new ComboBandItem(5, "5 Band"));
-            ComboBands.Items.Add(new ComboBandItem(6, "6 Band"));
+            ComboBands.Items.Add(new ComboBandItem(5, "5 Band"));            
 
             // Colors for normal bands
             Color[] colors = new Color[9];
@@ -98,7 +109,7 @@ namespace ResistorCalc {
                 e.Bounds.X + MarginWidth,
                 e.Bounds.Y + MarginHeight,
                 hgt, hgt);
-            ComboBox cbo = sender as ComboBox;
+            ComboBox cbo = (ComboBox)sender;
             Color color = (Color)cbo.Items[e.Index];
             using (SolidBrush brush = new SolidBrush(color)) {
                 e.Graphics.FillRectangle(brush, rect);
@@ -116,8 +127,9 @@ namespace ResistorCalc {
                     int x = hgt + 2 * MarginWidth;
                     int y = e.Bounds.Y + e.Bounds.Height / 2;
                     e.Graphics.TextRenderingHint = TextRenderingHint.AntiAliasGridFit;
-                    e.Graphics.DrawString(color.Name, font,
-                        Brushes.Black, x, y, sf);
+                    // Added +2 to 'x' here to give a little more space between
+                    // the colored square and the text. DVG
+                    e.Graphics.DrawString(color.Name, font, Brushes.Black, x+2, y, sf);
                 }
             }
 
@@ -148,6 +160,135 @@ namespace ResistorCalc {
         private void ComboBand_ColorCof_SelectedIndexChanged(object sender, EventArgs e) {
             Color k = (Color)ComboBand_ColorCof.SelectedItem;
             picBand5.BackColor = k;
+        }
+
+        private void ComboBands_SelectedIndexChanged(object sender, EventArgs e) {
+            ComboBandItem b = (ComboBandItem)ComboBands.SelectedItem;
+            switch (b.Value) {
+                case (int)ResistorType.Band3:
+                    CalcMode = (int)ResistorType.Band3;    // Calculation modes
+                    Prepare3Bands();
+                    break;
+                case (int)ResistorType.Band4:
+                    CalcMode = (int)ResistorType.Band4;
+                    Prepare4Bands();
+                    break;
+                case (int)ResistorType.Band5:
+                    CalcMode = (int)ResistorType.Band5;
+                    Prepare5Bands();
+                    break;
+            }
+        }
+
+        private void Prepare5Bands() {
+            throw new NotImplementedException();
+        }
+
+        private void Prepare4Bands() {
+            // Normal value for band 1 & 2
+            Color[] colors = new Color[9];
+            colors[0] = Color.Black;
+            colors[1] = Color.Brown;
+            colors[2] = Color.Red;
+            colors[3] = Color.Orange;
+            colors[4] = Color.Yellow;
+            colors[5] = Color.Green;
+            colors[6] = Color.Blue;
+            colors[7] = Color.Violet;
+            colors[8] = Color.Gray;
+            colors[8] = Color.White;
+
+            // Multiplier band
+            Color[] multiPlierColors = new Color[12];
+            multiPlierColors[0] = Color.Black;
+            multiPlierColors[1] = Color.Brown;
+            multiPlierColors[2] = Color.Red;
+            multiPlierColors[3] = Color.Orange;
+            multiPlierColors[4] = Color.Yellow;
+            multiPlierColors[5] = Color.Green;
+            multiPlierColors[6] = Color.Blue;
+            multiPlierColors[7] = Color.Violet;
+            multiPlierColors[8] = Color.Gray;
+            multiPlierColors[9] = Color.White;
+            multiPlierColors[10] = Color.Gold;
+            multiPlierColors[11] = Color.Silver;
+
+            // Tolerance band
+            Color[] toleranceColors = new Color[12];
+            toleranceColors[0] = Color.Black;
+            toleranceColors[1] = Color.Brown;
+            toleranceColors[2] = Color.Red;
+            toleranceColors[3] = Color.Orange;
+            toleranceColors[4] = Color.Yellow;
+            toleranceColors[5] = Color.Green;
+            toleranceColors[6] = Color.Blue;
+            toleranceColors[7] = Color.Violet;
+            toleranceColors[8] = Color.Gray;
+            toleranceColors[9] = Color.White;
+            toleranceColors[10] = Color.Gold;
+            toleranceColors[11] = Color.Silver;
+
+
+            // Disable unused bands
+            ComboBand_Tolerance.Enabled = true;
+            ComboBand_ColorCof.Enabled = false;
+
+            // Adapt labels
+            lbl3band.Text = "Multiplier";
+            lbl4band.Text = "Tolerance";
+            lbl5band.Text = "Not used";
+
+
+            DisplayColorSamples(this.ComboBand_1, colors);
+            DisplayColorSamples(this.ComboBand_2, colors);
+            DisplayColorSamples(this.ComboBand_3, multiPlierColors);
+        }
+
+        /// <summary>
+        /// 3 Bands resistor layout
+        /// </summary>
+        private void Prepare3Bands() {
+            // Normal value for band 1 & 2
+            Color[] colors = new Color[9];
+            colors[0] = Color.Black;
+            colors[1] = Color.Brown;
+            colors[2] = Color.Red;
+            colors[3] = Color.Orange;
+            colors[4] = Color.Yellow;
+            colors[5] = Color.Green;
+            colors[6] = Color.Blue;
+            colors[7] = Color.Violet;
+            colors[8] = Color.Gray;
+            colors[8] = Color.White;
+
+            // Multiplier band
+            Color[] multiPlierColors = new Color[12];
+            multiPlierColors[0] = Color.Black;
+            multiPlierColors[1] = Color.Brown;
+            multiPlierColors[2] = Color.Red;
+            multiPlierColors[3] = Color.Orange;
+            multiPlierColors[4] = Color.Yellow;
+            multiPlierColors[5] = Color.Green;
+            multiPlierColors[6] = Color.Blue;
+            multiPlierColors[7] = Color.Violet;
+            multiPlierColors[8] = Color.Gray;
+            multiPlierColors[9] = Color.White;
+            multiPlierColors[10] = Color.Gold;
+            multiPlierColors[11] = Color.Silver;
+
+            // Disable unused bands
+            ComboBand_Tolerance.Enabled = false;
+            ComboBand_ColorCof.Enabled = false;
+
+            // Adapt labels
+            lbl3band.Text = "Multiplier";
+            lbl4band.Text = "Not used";
+            lbl5band.Text = "Not used";
+
+                   
+            DisplayColorSamples(this.ComboBand_1, colors);
+            DisplayColorSamples(this.ComboBand_2, colors);
+            DisplayColorSamples(this.ComboBand_3, multiPlierColors);
         }
     }
 }

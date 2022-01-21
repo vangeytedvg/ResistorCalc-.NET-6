@@ -16,30 +16,34 @@ namespace ResistorCalc.Services {
         /// </summary>
         /// <param name="color"></param>
         /// <returns></returns>
-        public static int ConvertColorToValue(Color color) {
-            int digit = 0;
+        public static float Multiplier(Color color) {
+            float multiplyBy = 0;
             if (color == Color.Black) {
-                digit = 1;
+                multiplyBy = 1;
             } else if (color == Color.Brown) {
-                digit = 10;
+                multiplyBy = 10;
             } else if (color == Color.Red) {
-                digit = 100;
+                multiplyBy = 100;
             } else if (color == Color.Orange) {
-                digit = 1000;
+                multiplyBy = 1000;
             } else if (color == Color.Yellow) {
-                digit = 10000;
+                multiplyBy = 10000;
             } else if (color == Color.Green) {
-                digit = 100000;
+                multiplyBy = 100000;
             } else if (color == Color.Blue) {
-                digit = 1000000;
+                multiplyBy = 1000000;
             } else if (color == Color.Violet) {
-                digit = 10000000;
+                multiplyBy = 10000000;
             } else if (color == Color.Gray) {
-                digit = 100000000;
-            } else if (color == Color.Gray) {
-                digit = 1000000000;
+                multiplyBy = 100000000;
+            } else if (color == Color.White) {
+                multiplyBy = 1000000000;
+            } else if (color == Color.Gold) {
+                multiplyBy = 0.1f;
+            } else if (color == Color.Silver) {
+                multiplyBy = 0.01f;
             }
-            return digit;
+            return multiplyBy;
         }
     }
 }
