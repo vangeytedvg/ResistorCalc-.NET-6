@@ -10,14 +10,14 @@ namespace ResistorCalc.Models {
     /// </summary>
     internal class ComboBandItem {
         public ComboBandItem(int value, string text) {
-            this.Value = value;
-            this.Text = text;
+            Value = value;
+            Text = text;
         }
         public int Value { get; set; }
         public string? Text { get; set; }
 
         public override string ToString() {
-            return this.Text;
+            return Text;
         }
     }
 }

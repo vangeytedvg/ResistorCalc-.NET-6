@@ -36,7 +36,7 @@ namespace ResistorCalc {
             ComboBands.Items.Add(new ComboBandItem(5, "5 Band"));            
 
             // Colors for normal bands
-            Color[] colors = new Color[9];
+            Color[] colors = new Color[10];            
             colors[0] = Color.Black;
             colors[1] = Color.Brown;
             colors[2] = Color.Red;
@@ -46,7 +46,7 @@ namespace ResistorCalc {
             colors[6] = Color.Blue;
             colors[7] = Color.Violet;
             colors[8] = Color.Gray;
-            colors[8] = Color.White;
+            colors[9] = Color.White;
 
             // Tolerance %
             Color[] toleranceColors = new Color[2];
@@ -64,6 +64,8 @@ namespace ResistorCalc {
             multiPlierColors[6] = Color.Violet;
             multiPlierColors[7] = Color.Gray;
             multiPlierColors[8] = Color.White;
+
+
 
             // Set the combos
             DisplayColorSamples(this.ComboBand_1, colors);
@@ -83,6 +85,9 @@ namespace ResistorCalc {
         /// <param name="cbo"></param>
         /// <param name="colors"></param>       
         private void DisplayColorSamples(ComboBox cbo, Color[] colors) {
+
+            cbo.DrawItem -= cboColorSample_DrawItem;
+
             // Make the ComboBox owner-drawn.
             cbo.DrawMode = DrawMode.OwnerDrawFixed;
 
@@ -180,8 +185,66 @@ namespace ResistorCalc {
             }
         }
 
+        /// <summary>
+        /// 5 bands resistor
+        /// </summary>
         private void Prepare5Bands() {
-            throw new NotImplementedException();
+            // Normal value for band 1 & 2 & 3
+            Color[] colors = new Color[9];
+            colors[0] = Color.Black;
+            colors[1] = Color.Brown;
+            colors[2] = Color.Red;
+            colors[3] = Color.Orange;
+            colors[4] = Color.Yellow;
+            colors[5] = Color.Green;
+            colors[6] = Color.Blue;
+            colors[7] = Color.Violet;
+            colors[8] = Color.Gray;
+            colors[8] = Color.White;
+
+            // Multiplier band
+            Color[] multiPlierColors = new Color[12];
+            multiPlierColors[0] = Color.Black;
+            multiPlierColors[1] = Color.Brown;
+            multiPlierColors[2] = Color.Red;
+            multiPlierColors[3] = Color.Orange;
+            multiPlierColors[4] = Color.Yellow;
+            multiPlierColors[5] = Color.Green;
+            multiPlierColors[6] = Color.Blue;
+            multiPlierColors[7] = Color.Violet;
+            multiPlierColors[8] = Color.Gray;
+            multiPlierColors[9] = Color.White;
+            multiPlierColors[10] = Color.Gold;
+            multiPlierColors[11] = Color.Silver;
+
+            // Tolerance band
+            Color[] toleranceColors = new Color[10];
+            toleranceColors[0] = Color.Brown;
+            toleranceColors[1] = Color.Red;
+            toleranceColors[2] = Color.Orange;
+            toleranceColors[3] = Color.Yellow;
+            toleranceColors[4] = Color.Green;
+            toleranceColors[5] = Color.Blue;
+            toleranceColors[6] = Color.Violet;
+            toleranceColors[7] = Color.Gray;            
+            toleranceColors[8] = Color.Gold;
+            toleranceColors[9] = Color.Silver;
+            
+            ComboBand_Tolerance.Enabled = true;
+            ComboBand_ColorCof.Enabled = true;
+
+            // Adapt labels
+            lbl3band.Text = "3d band";
+            lbl4band.Text = "Mulitplier";
+            lbl5band.Text = "Tolerance";
+
+
+            DisplayColorSamples(this.ComboBand_1, colors);
+            DisplayColorSamples(this.ComboBand_2, colors);
+            DisplayColorSamples(this.ComboBand_3, colors);
+            DisplayColorSamples(this.ComboBand_Tolerance, multiPlierColors);
+            DisplayColorSamples(this.ComboBand_ColorCof, toleranceColors);
+
         }
 
         private void Prepare4Bands() {
@@ -289,6 +352,10 @@ namespace ResistorCalc {
             DisplayColorSamples(this.ComboBand_1, colors);
             DisplayColorSamples(this.ComboBand_2, colors);
             DisplayColorSamples(this.ComboBand_3, multiPlierColors);
+        }
+
+        private void btnCalculateResult_Click(object sender, EventArgs e) {
+            MessageBox.Show(CalcMode.ToString());
         }
     }
 }

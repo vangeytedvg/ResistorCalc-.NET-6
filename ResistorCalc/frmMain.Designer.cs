@@ -80,7 +80,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ResistorCalc.Properties.Resources.ohm;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(91, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,6 +255,7 @@
             this.btnCalculateResult.TabIndex = 25;
             this.btnCalculateResult.Values.Image = global::ResistorCalc.Properties.Resources.calculator;
             this.btnCalculateResult.Values.Text = "Calculate";
+            this.btnCalculateResult.Click += new System.EventHandler(this.btnCalculateResult_Click);
             // 
             // frmMain
             // 
