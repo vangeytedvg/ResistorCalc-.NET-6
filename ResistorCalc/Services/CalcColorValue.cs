@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace ResistorCalc.Services {
 
+    public class MultiPSymbol {
+        public float Multiplier { get; set; }
+        public string Symbol { get; set; }
+    }
+
     /// <summary>
     /// Class containing static conversion functions
     /// </summary>
@@ -16,35 +21,49 @@ namespace ResistorCalc.Services {
         /// </summary>
         /// <param name="color">Multiplier Color</param>
         /// <returns>Multiplication value</returns>
-        public static float Multiplier(Color color) {
-            float multiplyBy = 0;
+        public static MultiPSymbol Multiplier(Color color) {
+            MultiPSymbol mp = new MultiPSymbol();
+            mp.Multiplier = 0.0f;
+            mp.Symbol = "";
             if (color == Color.Black) {
-                multiplyBy = 1;
-            } else if (color == Color.Brown) {
-                multiplyBy = 10;
-            } else if (color == Color.Red) {
-                multiplyBy = 100;
-            } else if (color == Color.Orange) {
-                multiplyBy = 1000;
+                mp.Multiplier = 1;
+                mp.Symbol = "Ω";
+            } else if (color == Color.Brown) {                
+                mp.Multiplier = 10;
+                mp.Symbol = "Ω";
+            } else if (color == Color.Red) {                
+                mp.Multiplier = 100;
+                mp.Symbol = "Ω";
+            } else if (color == Color.Orange) {                
+                mp.Multiplier = 1;
+                mp.Symbol = "k Ω";
             } else if (color == Color.Yellow) {
-                multiplyBy = 10000;
-            } else if (color == Color.Green) {
-                multiplyBy = 100000;
-            } else if (color == Color.Blue) {
-                multiplyBy = 1000000;
-            } else if (color == Color.Violet) {
-                multiplyBy = 10000000;
-            } else if (color == Color.Gray) {
-                multiplyBy = 100000000;
+                mp.Multiplier = 10;
+                mp.Symbol = "k Ω";
+            } else if (color == Color.Green) {                
+                mp.Multiplier = 100;
+                mp.Symbol = "k Ω";
+            } else if (color == Color.Blue) {                
+                mp.Multiplier = 1;
+                mp.Symbol = "M Ω";
+            } else if (color == Color.Violet) {                
+                mp.Multiplier = 10;
+                mp.Symbol = "M Ω";
+            } else if (color == Color.Gray) {                
+                mp.Multiplier = 100;
+                mp.Symbol = "M Ω";
             } else if (color == Color.White) {
-                multiplyBy = 1000000000;
-            } else if (color == Color.Gold) {
-                multiplyBy = 0.1f;
+                mp.Multiplier = 1;
+                mp.Symbol = "G Ω";
+            } else if (color == Color.Gold) {                
+                mp.Multiplier = 0.1f;
+                mp.Symbol = "Ω";
             } else if (color == Color.Silver) {
-                multiplyBy = 0.01f;
+                mp.Multiplier = 0.01f; ;
+                mp.Symbol = "Ω";
             }
-            return multiplyBy;
-        }
+            return mp;
+        }        
 
         /// <summary>
         /// Determine the tolerance for a given color

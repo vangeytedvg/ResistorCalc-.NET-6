@@ -33,8 +33,8 @@
             this.ComboBand_1 = new System.Windows.Forms.ComboBox();
             this.ComboBand_2 = new System.Windows.Forms.ComboBox();
             this.ComboBand_3 = new System.Windows.Forms.ComboBox();
-            this.ComboBand_Tolerance = new System.Windows.Forms.ComboBox();
-            this.ComboBand_ColorCof = new System.Windows.Forms.ComboBox();
+            this.ComboBand_4 = new System.Windows.Forms.ComboBox();
+            this.ComboBand_5 = new System.Windows.Forms.ComboBox();
             this.lbl1band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl2band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lbl3band = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -47,6 +47,8 @@
             this.picBand4 = new System.Windows.Forms.PictureBox();
             this.picBand5 = new System.Windows.Forms.PictureBox();
             this.btnCalculateResult = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblOhmValue = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBand1)).BeginInit();
@@ -135,25 +137,25 @@
             this.ComboBand_3.TabIndex = 10;
             this.ComboBand_3.SelectedIndexChanged += new System.EventHandler(this.ComboBand_3_SelectedIndexChanged);
             // 
-            // ComboBand_Tolerance
+            // ComboBand_4
             // 
-            this.ComboBand_Tolerance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBand_Tolerance.FormattingEnabled = true;
-            this.ComboBand_Tolerance.Location = new System.Drawing.Point(318, 140);
-            this.ComboBand_Tolerance.Name = "ComboBand_Tolerance";
-            this.ComboBand_Tolerance.Size = new System.Drawing.Size(91, 23);
-            this.ComboBand_Tolerance.TabIndex = 12;
-            this.ComboBand_Tolerance.SelectedIndexChanged += new System.EventHandler(this.ComboBand_Tolerance_SelectedIndexChanged);
+            this.ComboBand_4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBand_4.FormattingEnabled = true;
+            this.ComboBand_4.Location = new System.Drawing.Point(318, 140);
+            this.ComboBand_4.Name = "ComboBand_4";
+            this.ComboBand_4.Size = new System.Drawing.Size(91, 23);
+            this.ComboBand_4.TabIndex = 12;
+            this.ComboBand_4.SelectedIndexChanged += new System.EventHandler(this.ComboBand_4_SelectedIndexChanged);
             // 
-            // ComboBand_ColorCof
+            // ComboBand_5
             // 
-            this.ComboBand_ColorCof.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBand_ColorCof.FormattingEnabled = true;
-            this.ComboBand_ColorCof.Location = new System.Drawing.Point(415, 140);
-            this.ComboBand_ColorCof.Name = "ComboBand_ColorCof";
-            this.ComboBand_ColorCof.Size = new System.Drawing.Size(91, 23);
-            this.ComboBand_ColorCof.TabIndex = 13;
-            this.ComboBand_ColorCof.SelectedIndexChanged += new System.EventHandler(this.ComboBand_ColorCof_SelectedIndexChanged);
+            this.ComboBand_5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBand_5.FormattingEnabled = true;
+            this.ComboBand_5.Location = new System.Drawing.Point(415, 140);
+            this.ComboBand_5.Name = "ComboBand_5";
+            this.ComboBand_5.Size = new System.Drawing.Size(91, 23);
+            this.ComboBand_5.TabIndex = 13;
+            this.ComboBand_5.SelectedIndexChanged += new System.EventHandler(this.ComboBand_5_SelectedIndexChanged);
             // 
             // lbl1band
             // 
@@ -200,7 +202,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ResistorCalc.Properties.Resources.resistor;
-            this.pictureBox2.Location = new System.Drawing.Point(115, 185);
+            this.pictureBox2.Location = new System.Drawing.Point(115, 199);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(298, 71);
             this.pictureBox2.TabIndex = 19;
@@ -208,7 +210,7 @@
             // 
             // picBand1
             // 
-            this.picBand1.Location = new System.Drawing.Point(188, 191);
+            this.picBand1.Location = new System.Drawing.Point(188, 205);
             this.picBand1.Name = "picBand1";
             this.picBand1.Size = new System.Drawing.Size(16, 59);
             this.picBand1.TabIndex = 20;
@@ -216,7 +218,7 @@
             // 
             // picBand2
             // 
-            this.picBand2.Location = new System.Drawing.Point(213, 196);
+            this.picBand2.Location = new System.Drawing.Point(213, 210);
             this.picBand2.Name = "picBand2";
             this.picBand2.Size = new System.Drawing.Size(14, 49);
             this.picBand2.TabIndex = 21;
@@ -224,7 +226,7 @@
             // 
             // picBand3
             // 
-            this.picBand3.Location = new System.Drawing.Point(237, 196);
+            this.picBand3.Location = new System.Drawing.Point(237, 210);
             this.picBand3.Name = "picBand3";
             this.picBand3.Size = new System.Drawing.Size(14, 49);
             this.picBand3.TabIndex = 22;
@@ -232,7 +234,7 @@
             // 
             // picBand4
             // 
-            this.picBand4.Location = new System.Drawing.Point(261, 196);
+            this.picBand4.Location = new System.Drawing.Point(261, 210);
             this.picBand4.Name = "picBand4";
             this.picBand4.Size = new System.Drawing.Size(14, 49);
             this.picBand4.TabIndex = 23;
@@ -240,7 +242,7 @@
             // 
             // picBand5
             // 
-            this.picBand5.Location = new System.Drawing.Point(311, 196);
+            this.picBand5.Location = new System.Drawing.Point(311, 210);
             this.picBand5.Name = "picBand5";
             this.picBand5.Size = new System.Drawing.Size(14, 49);
             this.picBand5.TabIndex = 24;
@@ -249,7 +251,7 @@
             // btnCalculateResult
             // 
             this.btnCalculateResult.AutoSize = true;
-            this.btnCalculateResult.Location = new System.Drawing.Point(191, 277);
+            this.btnCalculateResult.Location = new System.Drawing.Point(191, 283);
             this.btnCalculateResult.Name = "btnCalculateResult";
             this.btnCalculateResult.Size = new System.Drawing.Size(149, 38);
             this.btnCalculateResult.TabIndex = 25;
@@ -257,11 +259,33 @@
             this.btnCalculateResult.Values.Text = "Calculate";
             this.btnCalculateResult.Click += new System.EventHandler(this.btnCalculateResult_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1034, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "label1";
+            // 
+            // lblOhmValue
+            // 
+            this.lblOhmValue.AutoSize = true;
+            this.lblOhmValue.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblOhmValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblOhmValue.Location = new System.Drawing.Point(115, 172);
+            this.lblOhmValue.Name = "lblOhmValue";
+            this.lblOhmValue.Size = new System.Drawing.Size(18, 20);
+            this.lblOhmValue.TabIndex = 27;
+            this.lblOhmValue.Text = "0";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 333);
+            this.Controls.Add(this.lblOhmValue);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCalculateResult);
             this.Controls.Add(this.picBand5);
             this.Controls.Add(this.picBand4);
@@ -274,8 +298,8 @@
             this.Controls.Add(this.lbl3band);
             this.Controls.Add(this.lbl2band);
             this.Controls.Add(this.lbl1band);
-            this.Controls.Add(this.ComboBand_ColorCof);
-            this.Controls.Add(this.ComboBand_Tolerance);
+            this.Controls.Add(this.ComboBand_5);
+            this.Controls.Add(this.ComboBand_4);
             this.Controls.Add(this.ComboBand_3);
             this.Controls.Add(this.ComboBand_2);
             this.Controls.Add(this.ComboBand_1);
@@ -314,8 +338,8 @@
         private ComboBox ComboBand_1;
         private ComboBox ComboBand_2;
         private ComboBox ComboBand_3;
-        private ComboBox ComboBand_Tolerance;
-        private ComboBox ComboBand_ColorCof;
+        private ComboBox ComboBand_4;
+        private ComboBox ComboBand_5;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl1band;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl2band;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lbl3band;
@@ -328,5 +352,7 @@
         private PictureBox picBand4;
         private PictureBox picBand5;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnCalculateResult;
+        private Label label1;
+        private Label lblOhmValue;
     }
 }
