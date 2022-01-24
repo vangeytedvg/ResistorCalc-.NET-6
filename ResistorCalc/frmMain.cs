@@ -94,9 +94,6 @@ namespace ResistorCalc {
             ComboBands.Items.Add(new ComboBandItem(5, "5 Band"));                       
         }
 
-        private void kryptonPalette1_PalettePaint(object sender, PaletteLayoutEventArgs e) {
-
-        }
 
         /// <summary>
         /// Set up the ComboBox to display color samples and their names.
