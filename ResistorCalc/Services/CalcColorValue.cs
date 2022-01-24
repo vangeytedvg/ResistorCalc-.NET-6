@@ -75,27 +75,27 @@ namespace ResistorCalc.Services {
             if (color == Color.Black) {
                 tolerance = "";
             } else if (color == Color.Brown) {
-                tolerance = "+/- 1%(F)";
+                tolerance = "± 1%(F)";
             } else if (color == Color.Red) {
-                tolerance = "+/- 2% (G)";
+                tolerance = "± 2% (G)";
             } else if (color == Color.Orange) {
-                tolerance = "+/- 0.05% (W)";
+                tolerance = "± 0.05% (W)";
             } else if (color == Color.Yellow) {
-                tolerance = "+/- 0.02% (P)";
+                tolerance = "± 0.02% (P)";
             } else if (color == Color.Green) {
-                tolerance = "+/- 0.5% (D)";
+                tolerance = "± 0.5% (D)";
             } else if (color == Color.Blue) {
-                tolerance = "+/- 0.25% (C)";
+                tolerance = "± 0.25% (C)";
             } else if (color == Color.Violet) {
-                tolerance = "+/- 0.1% (B)";
+                tolerance = "± 0.1% (B)";
             } else if (color == Color.Gray) {
-                tolerance = "+/- 0.01% (L)";
+                tolerance = "± 0.01% (L)";
             } else if (color == Color.White) {
                 tolerance = "";
             } else if (color == Color.Gold) {
-                tolerance = "+/- 5% (J)";
+                tolerance = "± 5% (J)";
             } else if (color == Color.Silver) {
-                tolerance = "+/- 10% (K)";
+                tolerance = "± 10% (K)";
             }
             return tolerance;
         }

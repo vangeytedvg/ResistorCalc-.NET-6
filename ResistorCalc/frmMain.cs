@@ -236,7 +236,7 @@ namespace ResistorCalc {
             ClearBand(ComboBand_5);
             NormalColorBands(ComboBand_1);
             NormalColorBands(ComboBand_2);
-            NormalColorBands(ComboBand_2);
+            NormalColorBands(ComboBand_3);
             MultiplierColorBands(ComboBand_4);
             ToleranceColorBands(ComboBand_5);
         }
@@ -290,14 +290,48 @@ namespace ResistorCalc {
                     CalculateThreeBandResistor();
                     break;
                 case 4:
+                    CalculateFourBandResistor();
                     // 4 Color resistor
-                    break;
-                    // 5 Color resistor
+                    break;                    
                 case 5:
+                    // 5 Color resistor
+                    CalculateFiveBandResistor();
                     break;
             }
         }
 
+        /// <summary>
+        /// 5 band resistor calculation
+        /// </summary>
+        private void CalculateFiveBandResistor() {
+            int b1 = ComboBand_1.SelectedIndex;
+            int b2 = ComboBand_2.SelectedIndex;
+            int b3 = ComboBand_3.SelectedIndex;
+            string cv = b1.ToString() + b2.ToString() + b2.ToString();
+
+            MultiPSymbol multiply = CalcColorValue.Multiplier((Color)ComboBand_4.SelectedItem);
+            float resist = multiply.Multiplier * Int32.Parse(cv);
+            //resist = resist / multiply.Multiplier;                            
+            lblOhmValue.Text = resist.ToString() + " " + multiply.Symbol + " " + CalcColorValue.Tolerance((Color)ComboBand_5.SelectedItem); ;
+        }
+
+        /// <summary>
+        /// 4 band resistor calculation
+        /// </summary>
+        private void CalculateFourBandResistor() {
+            int b1 = ComboBand_1.SelectedIndex;
+            int b2 = ComboBand_2.SelectedIndex;
+            string cv = b1.ToString() + b2.ToString();
+
+            MultiPSymbol multiply = CalcColorValue.Multiplier((Color)ComboBand_3.SelectedItem);
+            float resist = multiply.Multiplier * Int32.Parse(cv);
+            //resist = resist / multiply.Multiplier;                            
+            lblOhmValue.Text = resist.ToString() + " " + multiply.Symbol + " " + CalcColorValue.Tolerance((Color)ComboBand_4.SelectedItem); 
+        }
+
+        /// <summary>
+        /// 3 band resitor calculation
+        /// </summary>
         private void CalculateThreeBandResistor() {
             int b1 = ComboBand_1.SelectedIndex;
             int b2 = ComboBand_2.SelectedIndex;
